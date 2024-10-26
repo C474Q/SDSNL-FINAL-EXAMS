@@ -1,63 +1,42 @@
 # City Population Annual Timeseries Analysis
 
 ## Project Description
-This project aims to analyze the City Population Annual Timeseries dataset from the UN Statistics Division. The analysis includes data cleaning, exploratory data analysis (EDA), visualization, model development, and evaluation to gain insights into population trends across different cities.
+This project analyzes the City Population Annual Timeseries dataset from the UN Statistics Division to understand population trends across cities from 1972 to 2014. The goal is to evaluate population changes over time, investigate population distributions by city type and sex, and develop predictive models for future population estimates.
 
 ## Dataset Description
-The dataset contains annual population data for various cities worldwide, including the year of data collection, city type, country of origin, and population figures. 
+The dataset consists of annual population data for various cities worldwide. It includes information such as the country or area, city names, city types, and population figures for the years 1972 to 2014. This comprehensive dataset allows for detailed analysis of urban population trends.
 
 ## Summary of Findings
-The analysis reveals significant trends in city populations over the years, highlighting the top cities by population and the distribution of population by city type and sex. The model evaluation indicates that the Decision Tree Regressor outperformed other models, achieving an R² Score of 98.54% and a Mean Absolute Error of 7.83.
+The analysis revealed significant insights, including population growth patterns across different cities and the distribution of populations by city type. The Random Forest Regressor model demonstrated the best performance with a Mean Absolute Error of approximately 9.57 and an R² Score of about 95.61%, indicating high accuracy in predicting city populations.
 
 ## Data Preprocessing
-The following data cleaning steps were taken:
-- Removed unnecessary columns: 'Value Footnotes', 'Reliability', 'Record Type', 'Area', and 'Source Year'.
-- Renamed columns for consistency.
-- Cleared rows with missing values.
-- Cleaned country names by removing special characters and text within parentheses.
-- Converted population figures from string format to integers, eliminating decimals.
+Data preprocessing involved several key steps to clean and prepare the dataset for analysis. Unnecessary columns were removed, country names were standardized by capitalizing and cleaning special characters, and population figures were converted to integers. Additionally, rows with missing values were dropped to ensure data integrity.
 
 ## Exploratory Data Analysis
 ### Visualization
-1. **Population Distribution from 1972 to 2014**
-   ![Population Distribution from 1972 to 2014](images/images.png)
-   - Interpretation: The total population showed a steady increase from 1972 to 2014.
+![Population Distribution from 1972 to 2014](images/image1.png)
+*This visualization illustrates the total population trend from 1972 to 2014, showing an overall increase in urban populations during this period.*
 
-2. **Number of Cities by City Type**
-   ![Number of Cities by City Type](images/image2.png)
-   - Interpretation: The count of cities varies significantly across different city types.
+![Number of Cities by City Type](images/image2.png)
+*This visualization presents the distribution of cities by type, indicating the predominant city types in the dataset.*
 
-3. **Total Population by Sex**
-   ![Total Population by Sex](images/image3.png.png)
-   - Interpretation: The distribution of the population is relatively balanced between sexes.
+![Total Population by Sex](images/image3.png)
+*This bar chart displays the total population divided by sex, highlighting gender distribution in the population.*
 
-4. **Population Distribution for Each Country (Top 20)**
-   ![Population Distribution for Each Country](images/image4.png)
-   - Interpretation: The population distribution highlights the largest countries by total population.
+![Population Distribution for Each Country (Top 20)](images/image4.png)
+*This visualization shows the total population for the top 20 countries, providing insights into the largest urban populations worldwide.*
 
-5. **Population Distribution for the Top 25 Cities**
-   ![Population Distribution for the Top 25 Cities](images/image5.png)
-   - Interpretation: The top cities by population show significant variations in their total populations.
+![Population Distribution for the Top 25 Cities](images/image5.png)
+*This chart illustrates the population distribution for the top 25 cities, revealing the most populous urban areas.*
 
 ## Model Development
-The following models were developed and evaluated:
-- Linear Regression
-- Random Forest Regressor
-- Decision Tree Regressor
-- XGBoost Regressor
-
-The models were trained on features such as 'City_Type', 'Year', 'Country_or_Area', and 'City'.
+The model development process involved selecting relevant features from the dataset, including city type, year, country, and city names. Various machine learning models were trained, including Linear Regression, Random Forest Regressor, Decision Tree Regressor, and XGBoost Regressor. The data was split into training and testing sets to ensure model validation.
 
 ## Model Evaluation
-| Model                       | Mean Absolute Error | R² Score   | Accuracy    |
-|-----------------------------|---------------------|------------|-------------|
-| Linear Regression           | 19.02               | 83.20%     | 80.98%      |
-| Random Forest Regressor     | 9.57                | 95.61%     | 90.43%      |
-| Decision Tree Regressor     | 7.83                | 98.54%     | 92.17%      |
-| XGBoost Regressor           | 9.14                | 98.13%     | 90.86%      |
+The model evaluation process included calculating Mean Absolute Error (MAE) and R² Score for each model. The Random Forest Regressor exhibited the best performance, with a MAE of 9.57 and an R² Score of 95.61%. These metrics demonstrate the model's effectiveness in predicting city populations based on historical data.
 
 ## Conclusion
-The analysis successfully identified trends in city populations and evaluated several regression models. The Decision Tree Regressor demonstrated the best performance, making it a reliable model for predicting city populations based on available features.
+In conclusion, this project effectively analyzed urban population trends and developed predictive models for estimating future populations. The findings highlight the importance of understanding demographic changes in urban areas, which can inform policy decisions and urban planning initiatives.
 
 ## Contributors
-NOTE: Your professor be the one to fill this section.
+❗ NOTE: Your professor will be the one to fill this section.
