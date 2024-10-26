@@ -6,13 +6,21 @@ This project analyzes the City Population Annual Timeseries dataset from the UN 
 ## Dataset Description
 The dataset consists of annual population data for various cities worldwide. It includes information such as the country or area, city names, city types, and population figures for the years 1972 to 2014. This comprehensive dataset allows for detailed analysis of urban population trends.
 
+**Dataset URL:** [City Population Annual Timeseries](https://datahub.io/core/population-city/r/unsd-citypopulation-year-fm.csv)
+
 ## Summary of Findings
 The analysis revealed significant insights, including population growth patterns across different cities and the distribution of populations by city type. The Random Forest Regressor model demonstrated the best performance with a Mean Absolute Error of approximately 9.57 and an R² Score of about 95.61%, indicating high accuracy in predicting city populations.
 
 ## Data Preprocessing
 Data preprocessing involved several key steps to clean and prepare the dataset for analysis. Unnecessary columns were removed, country names were standardized by capitalizing and cleaning special characters, and population figures were converted to integers. Additionally, rows with missing values were dropped to ensure data integrity.
+- Dropped columns: Value Footnotes, Reliability, Record Type, Area, Source Year
+- Handled missing values and renamed columns for clarity.
+- Cleaned country and city names to standardize the dataset.
 
 ## Exploratory Data Analysis
+- **Population Trends:** We visualized population growth trends over the years and found a steady increase in urban populations.
+- **City Types Distribution:** Count plots illustrated the distribution of cities by type.
+
 ### Visualization
 ![Population Distribution from 1972 to 2014](images/image1.png)
 *This visualization illustrates the total population trend from 1972 to 2014, showing an overall increase in urban populations during this period.*
@@ -30,13 +38,20 @@ Data preprocessing involved several key steps to clean and prepare the dataset f
 *This chart illustrates the population distribution for the top 25 cities, revealing the most populous urban areas.*
 
 ## Model Development
-The model development process involved selecting relevant features from the dataset, including city type, year, country, and city names. Various machine learning models were trained, including Linear Regression, Random Forest Regressor, Decision Tree Regressor, and XGBoost Regressor. The data was split into training and testing sets to ensure model validation.
+We employed four regression algorithms to predict city populations:
+- Linear Regression
+- Random Forest Regressor
+- Decision Tree Regressor
+- XGBoost Regressor
 
 ## Model Evaluation
-The model evaluation process included calculating Mean Absolute Error (MAE) and R² Score for each model. The Random Forest Regressor exhibited the best performance, with a MAE of 9.57 and an R² Score of 95.61%. These metrics demonstrate the model's effectiveness in predicting city populations based on historical data.
+Each model was evaluated using Mean Absolute Error (MAE) and R² Score. The Random Forest Regressor achieved the best performance:
+- Mean Absolute Error: 9.57
+- R² Score: 95.61%
 
 ## Conclusion
-In conclusion, this project effectively analyzed urban population trends and developed predictive models for estimating future populations. The findings highlight the importance of understanding demographic changes in urban areas, which can inform policy decisions and urban planning initiatives.
+The project successfully demonstrated the ability to analyze and model city population data. The findings highlighted significant urbanization trends and the importance of effective data preprocessing and modeling techniques.
+
 
 ## Contributors
 ❗ NOTE: Your professor will be the one to fill this section.
